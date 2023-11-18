@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Readex+Pro:wght@200;300;400;500;600;700&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>To Do List v5</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="img/circle.png" alt="back" class="back-top" />
+      <img src="img/circle.png" alt="back" class="back-bot" />
+      <div class="header">
+        <div class="face">
+          <img src="img/face.png" alt="face" />
+          <h4>Good evening, Bella</h4>
+        </div>
+        <div class="day">
+          <ul>
+            <li>
+              <div class="nomor">5</div>
+              <span>Thur</span>
+            </li>
+            <li>
+              <div class="nomor">6</div>
+              <span>Fri</span>
+            </li>
+            <li>
+              <div class="nomor">7</div>
+              <span>Sat</span>
+            </li>
+            <li>
+              <div class="nomor active">8</div>
+              <span class="active-2">Sun</span>
+            </li>
+            <li>
+              <div class="nomor">9</div>
+              <span>Mon</span>
+            </li>
+            <li>
+              <div class="nomor">10</div>
+              <span>Tues</span>
+            </li>
+            <li>
+              <div class="nomor">11</div>
+              <span>Wed</span>
+            </li>
+          </ul>
+        </div>
+        <div class="search">
+          <img src="img/search.svg" alt="search" />
+          <input
+            type="search"
+            id="search"
+            placeholder="search"
+            onkeyup="search()"
+          />
+        </div>
+      </div>
+      <div class="today">
+        <h3>Today’s tasks</h3>
+        <ul id="list-container">
+          <!-- <li class="check">
+            <div class="text">
+              <h5>Go to gym</h5>
+            </div>
+            <div class="action">
+              <img src="img/edit.png" alt="edit" />
+              <img src="img/transh.png" alt="transh" />
+            </div>
+          </li>
+          <li>
+            <div class="text">
+              <h5>Go to gym</h5>
+            </div>
+            <div class="action">
+              <img src="img/edit.png" alt="edit" />
+              <img src="img/transh.png" alt="transh" />
+            </div>
+          </li>
+          <li>
+            <div class="text">
+              <h5>Go to gym</h5>
+            </div>
+            <div class="action">
+              <img src="img/edit.png" alt="edit" />
+              <img src="img/transh.png" alt="transh" />
+            </div>
+          </li> -->
+        </ul>
+      </div>
+      <div class="navBot">
+        <a href="#"><img src="img/menu-1.png" alt="" id="rumah" /></a>
+        <a href="#"><img src="img/menu-2.png" alt="" /></a>
+        <a href="#"><img src="img/menu-3.png" alt="" /></a>
+        <a href="#"><img src="img/menu-4.png" alt="" /></a>
+        <div class="add-list">
+          <img src="img/plus.png" alt="" />
+        </div>
+      </div>
+      <div id="add-list-v2" class="add-list-bot">
+        <h5>What did you do today?</h5>
+        <div>
+          <input type="text" placeholder="Add your list today" id="box-input" />
+        </div>
+        <button id="push" onclick="addList()">Add List</button>
+      </div>
+
+      <div id="edit-input" class="edit-bot">
+        <h5>Are you sure ?</h5>
+        <div>
+          <input type="text" placeholder="Add your list today" id="box-edit" />
+        </div>
+        <button id="push" onclick="editList()">Change</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      const navEdit = document.querySelector(".edit-bot");
+      document.getElementById("rumah").onclick = () => {
+        navEdit.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>
